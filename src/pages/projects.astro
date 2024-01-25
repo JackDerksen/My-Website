@@ -1,12 +1,14 @@
 ---
-import "../styles/global.css"; // Ensure your global styles are included
+// Import the Navigation component for consistent header navigation
+import Navigation from "../components/Navigation.astro";
+import "../styles/global.css"; // Ensure global styles are included
 ---
 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>Projects</title>
     <style>
         body {
             margin: 0;
@@ -18,7 +20,7 @@ import "../styles/global.css"; // Ensure your global styles are included
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
         }
         header {
             position: absolute;
@@ -50,10 +52,19 @@ import "../styles/global.css"; // Ensure your global styles are included
         .nav-button:hover {
             background-color: #7d83ac;
         }
-        .about-content {
-            text-align: center;
-            max-width: 600px;
-            margin-top: -50px; /* Adjust based on actual header size */
+        .github-link {
+            margin-top: 2rem;
+            background-color: #b4befe;
+            color: #1e1d23;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .github-link:hover {
+            background-color: #89dceb;
         }
     </style>
 </head>
@@ -69,9 +80,13 @@ import "../styles/global.css"; // Ensure your global styles are included
         </nav>
     </header>
 
-    <div class="about-content">
-        <h1>About Me</h1>
-        <p>This section should contain a more detailed introduction about yourself. You can discuss your professional background, what drives you, and your passions within your field. It's also a good place to share your goals and what you're looking to achieve through your work and this website.</p>
-    </div>
+    <main>
+        <h1>Projects</h1>
+        <!-- Add individual project details here -->
+
+        <!-- GitHub link button -->
+        <a href="https://github.com/JackDerksen" class="github-link" target="_blank" rel="noopener noreferrer">View My GitHub</a>
+    </main>
 </body>
 </html>
+

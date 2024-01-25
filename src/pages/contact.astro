@@ -1,12 +1,14 @@
 ---
-import "../styles/global.css"; // Ensure your global styles are included
+// Import the Navigation component for consistent header navigation
+import Navigation from "../components/Navigation.astro";
+import "../styles/global.css"; // Ensure global styles are included
 ---
 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>Contact</title>
     <style>
         body {
             margin: 0;
@@ -18,7 +20,7 @@ import "../styles/global.css"; // Ensure your global styles are included
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
         }
         header {
             position: absolute;
@@ -50,10 +52,25 @@ import "../styles/global.css"; // Ensure your global styles are included
         .nav-button:hover {
             background-color: #7d83ac;
         }
-        .about-content {
+        .contact-info {
             text-align: center;
-            max-width: 600px;
-            margin-top: -50px; /* Adjust based on actual header size */
+        }
+        .contact-item {
+            margin: 1rem 0;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .social-link {
+            color: #cdd6f4;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .social-link:hover {
+            color: #eba0ac; /* Use an accent color for hover state */
         }
     </style>
 </head>
@@ -69,9 +86,18 @@ import "../styles/global.css"; // Ensure your global styles are included
         </nav>
     </header>
 
-    <div class="about-content">
-        <h1>About Me</h1>
-        <p>This section should contain a more detailed introduction about yourself. You can discuss your professional background, what drives you, and your passions within your field. It's also a good place to share your goals and what you're looking to achieve through your work and this website.</p>
+    <div class="contact-info">
+        <h1>Contact</h1>
+        <div class="contact-item">Email: jmderksen9@gmail.com</div>
+        <div class="contact-item">Phone: (780) 245-5766</div>
+
+        <div class="social-links">
+            <!-- Replace href values with your actual social media links -->
+            <a href="https://instagram.com/jmderksen_" class="social-link" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://twitter.com/yourusername" class="social-link" target="_blank" rel="noopener noreferrer">Twitter</a>
+            <a href="https://linkedin.com/in/yourusername" class="social-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
     </div>
 </body>
 </html>
+
