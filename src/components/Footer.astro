@@ -1,16 +1,9 @@
 ---
 import Social from "./Social.astro";
+import "../styles/global.css"
 ---
 
-<style>
-  footer {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-</style>
-
-<footer>
-  <Social platform="github" username="JackDerksen" />
-  <Social platform="twitter" username="jmderksen_" />
+<footer class="footer">
+    <Social platform="github" username="JackDerksen" />
+    <Social platform="twitter" username="jmderksen_" />
 </footer>

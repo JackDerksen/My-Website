@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css"
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
 const pageTitle = "Home";
 ---
@@ -9,70 +11,13 @@ const pageTitle = "Home";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{pageTitle}</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #1e1d23;
-            color: #cdd6f4;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-        header {
-            position: absolute;
-            top: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            box-sizing: border-box;
-        }
-        .header-name {
-            font-size: 3rem;
-            color: #cdd6f4;
-        }
-        .nav-buttons {
-            display: flex;
-            gap: 1rem;
-        }
-        .nav-button {
-            background-color: #b4befe;
-            color: #1e1d23;
-            border: none;
-            border-radius: 5px;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .nav-button:hover {
-            background-color: #7d83ac;
-        }
-        .about-me {
-            text-align: center;
-            max-width: 600px;
-            margin-top: -100px; /* Adjust based on your header's size */
-            color: #f2cdcd;
-        }
-    </style>
 </head>
 <body>
-    <header>
-        <div class="header-name">Jack Derksen</div>
-        <nav class="nav-buttons">
-            <a href="/" class="nav-button">Home</a>
-            <a href="/about" class="nav-button">About</a>
-            <a href="/contact" class="nav-button">Contact</a>
-        </nav>
-    </header>
-
-    <div class="about-me">
-        <h1>Header</h1>
-        <p>Something here, idk what</p>
-    </div>
+    <Header />
+    <main class="main content">
+        <h1>Welcome to my portfolio site.</h1>
+        <p>Landing page paragraph here...</p>
+    </main>
+    <Footer />
 </body>
 </html>
